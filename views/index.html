@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/animate.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnostico</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/static/main.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="contenedor-header">
+      <div class="portada">
+        <h1>Diagnóstico de enfermedades</h1>
+        <h2>Cardiovasculares</h2>
+      </div>
+      <img class="imagen-portada" src="" alt="">
+    </div>
+    <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M-0.90,71.34 C254.17,155.23 421.22,110.81 505.30,5.24 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f2f2f2;"></path>
+      </svg></div>
+  </header>
+
+  <div class="contenedor form-container">
+    <p class="titulo">Seleccione los sintomas</p>
+    <p class="titulo">Del 0 al 10 basado en la intensidad</p>
+    <div class="form"></div>
+
+    <button class="aceptar" id="calcular">Enviar</button>
+  </div>
+
+  <div class="loading">
+    <div class="cont">
+      <div class="lds-heart"><div></div></div>
+      <p>Calculando diagnostico, por favor espere...</p>
+    </div>
+  </div>
+
+  <div class="contenedor info"></div>
+
+</body>
+</html>

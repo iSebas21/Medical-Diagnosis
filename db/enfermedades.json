@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Enfermedad coronaria",
+        "resumen": "Lesión o enfermedad en los principales vasos sanguíneos del corazón. Generalmente la causa es la acumulación de placa, lo que provoca que las arterias coronarias se angosten y limiten la irrigación sanguínea que va al corazón esta enfermedad no tiene cura",
+        "sintomas": "Se pueden presentar Dolor de pecho, náusea, indigestión, aturdimiento ligero, sudoración,dificultad para respirar, frecuencia cardíaca rápida."
+    },
+    {
+        "name":"Hipertensión arterial",
+        "resumen": "Afección en la que la presión de la sangre hacia las paredes de la arteria es demasiado alta. Generalmente, la hipertensión se define como la presión arterial por encima de 140/90 y se considera grave cuando está por encima de 180/120. Un medico profesional puede tratarla",
+        "sintomas":"Dolor de cabeza fuerte, náuseas o vómitos, confusión, cambios en la visión, sangrado nasal En algunos casos la presión arterial elevada no presenta síntomas. Si no se trata, con el tiempo, puede provocar trastornos de la salud, como enfermedades cardíacas y derrames cerebrales"
+    },
+    {
+        "name":"Paro cardiorespiratorio",
+        "resumen": "Es la repentina detención de la respiración y del latido cardíaco en un individuo. Implica la detención de la circulación de la sangre y, por lo tanto, la interrupción del suministro de oxígeno al cerebro.",
+        "sintomas":"Los síntomas principales son el desmayo y la ausencia de respuesta. También se puede sufrir dolor de pecho, aturdimiento, desmayo o síncope dificultad para respirar o palpitaciones."
+    },
+    {
+        "name":"Insuficiencia cardiaca",
+        "resumen":"Afección crónica que provoca que el corazón no bombee sangre con la eficacia necesaria. La insuficiencia cardíaca puede producirse cuando el corazón no bombea (sístole) o no se llena (diástole) correctamente.Los tratamientos incluyen comer alimentos con menos sal, limitar los fluidos y tomar medicamentos con prescripción",
+        "sintomas":"Los síntomas incluyen dificultad para respirar, fatiga, hinchazón en las piernas y ritmo cardíaco acelerado."
+    },
+    {
+        "name":"Arritmia",
+        "resumen":"Es un trastorno de la frecuencia cardíaca (pulso) o del ritmo cardíaco. La arritmia cardíaca ocurre cuando los impulsos eléctricos del corazón no funcionan correctamente. Si es necesario, el tratamiento puede incluir fármacos antiarrítmicos, procedimientos médicos, dispositivos implantables y cirugía",
+        "sintomas":"Pueden incluir palpitaciones, dolor en el pecho, desmayos o mareos"
+    },
+    {
+        "name":"Enfermedad arterial periférica",
+        "resumen":" Afección circulatoria en la que el estrechamiento de los vasos sanguíneos reduce la irrigación sanguínea a los miembros.El tratamiento consiste en cuidado personal y anticoagulantes. Dejar de consumir tabaco, hacer ejercicio y seguir una dieta saludable suelen ser tratamientos exitosos.        ",
+        "sintomas":"Los síntomas comprenden dolores o calambres musculares en las piernas o los brazos ocasionados por hacer actividad, como caminar, pero desaparecen después de algunos minutos de descanso."
+    },
+    {
+        "name":"Cardiopatía congénita",
+        "resumen":"Anormalidad del corazón que se desarrolla antes del nacimiento. La cardiopatía congénita es uno de los defectos de nacimiento más comunes.Los tratamientos incluyen el uso de medicamentos para bajar la presión arterial y controlar la frecuencia cardíaca, dispositivos cardíacos, procedimientos de cateterismo y cirugía",
+        "sintomas":" Los síntomas incluyen frecuencia cardíaca anormal, tono azulado en la piel, inflamación de los tejidos corporales o de los órganos, y dificultad para respirar, para alimentarse y para desarrollarse con normalidad"
+    },
+    {
+        "name":"Endocarditis",
+        "resumen":"Infección del revestimiento interior del corazón que generalmente también afecta a las válvulas cardíacas. La endocarditis generalmente ocurre cuando los gérmenes de cualquier parte del cuerpo viajan por la sangre y se adhieren a zonas dañadas del corazón. Las personas con válvulas cardíacas artificiales o dañadas, y otras enfermedades del corazón presentan un mayor riesgo .El tratamiento principal consiste en administrar antibióticos. Algunas veces se necesita cirugía.",
+        "sintomas":"Los síntomas varían según la gravedad de la infección, pero pueden incluir fiebre, escalofríos y fatiga."
+    },
+    {
+        "name":"Tromboembolismo pulmonar",
+        "resumen":"Afección en la que una o más arterias en los pulmones quedan obstruidas por un coágulo sanguíneo. El tratamiento oportuno para desintegrar el coágulo reduce significativamente el riesgo de muerte. Para lograrlo, se usan anticoagulantes o distintos procedimientos médicos",
+        "sintomas":"Algunos de los síntomas son dificultad para respirar, dolor en el pecho y tos"
+    },
+    {
+        "name":"Valvulopatía",
+        "resumen":"Estas patologías afectan, pues, a la válvula aórtica y mitral en el lado izquierdo y a las válvulas pulmonar y tricúspide en el lado derecho del corazón. Si empeoran y no se tratan, puede afectar al correcto flujo de la sangre al corazón y provocar graves problemas cardíacos. Generalmente se tratan con antibiticos pero en los peores casos se necesitara cirugía",
+        "sintomas":"La sintomatología variará en función de la valvulopatía, pero generalmente el paciente sentirá falta de aire, dolor en el tórax y pérdida del conocimiento cuando se realizan esfuerzos"
+    }
+]
