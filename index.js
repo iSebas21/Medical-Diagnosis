@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const { config } = require('process');
 
 //Middlewares
 app.use(express.urlencoded({ extended: false }));
@@ -62,7 +63,8 @@ app.post('/genresults', (req, res) => {
     
 });
 
+config.port = process.env.PORT
 
-app.listen(3000, () => {
+app.listen(config.port, () => {
     console.log("Servidor inicializado correctamente");
 });
