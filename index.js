@@ -63,16 +63,6 @@ app.post('/genresults', (req, res) => {
 });
 
 
-function sistemasDeEcuaciones(req, res) {
-    
-    // using spawn instead of exec, prefer a stream over a buffer
-    // to avoid maxBuffer issue
-    
-    
-  }
-
-
-//Start server
 app.listen(3000, () => {
-    console.log("Server started Bv...");
+    console.log("Servidor inicializado correctamente");
 });

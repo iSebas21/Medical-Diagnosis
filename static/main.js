@@ -134,27 +134,17 @@ const code = {
     genTarjeta: data => {
         const { name, resumen, sintomas } = data;
         const div = document.createElement("div");
-        div.classList.add("diagnostico");
         div.innerHTML = `
-        <div class="titulo2">
-            <span>${name}</span>
-        </div>
-        <div class="contenido">
-            <div class="informacion">
-                <div class="subtitulo">
-                    <span>Resumen</span>
-                </div>
-                <div class="texto">
-                    <p>${resumen}</p>
-                </div>
-                <div class="subtitulo">
-                    <span>Sintomas</span>
-                </div>
-                <div class="texto">
-                    <p>${sintomas}</p>
+            <div class="card text-dark bg-light mb-3 mx-auto" style="max-width: 50rem;">
+                <div class="card-body">
+                    <h3 class="card-title">${name}</h5>
+                    <h5 class="card-title">Resumen</h5>
+                    <p class="card-text">${resumen}</p>
+                    <h5 class="card-title">Sintomas</h5>
+                    <p class="card-text">${sintomas}</p>
                 </div>
             </div>
-        </div>`;
+            `;
         return div;
     },
     loadDeco: slider => {
