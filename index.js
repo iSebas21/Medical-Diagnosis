@@ -63,8 +63,7 @@ app.post('/genresults', (req, res) => {
     
 });
 
-config.port = process.env.PORT
 
-app.listen(config.port, () => {
+app.listen(3000, () => {
     console.log("Servidor inicializado correctamente");
 });

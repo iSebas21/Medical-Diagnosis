@@ -3,10 +3,7 @@
 window.addEventListener("load", () => {
 
     const contenedor = document.querySelector(".contenedor.form-container");
-
-    //Load Symptoms
     code.getSymptoms(contenedor);
-    //Load button
     code.loadButton(contenedor);
 
 });
@@ -18,19 +15,13 @@ const code = {
         btn.addEventListener("click", async () => {
             if (activeButton) {
                 const loading = document.querySelector("body .loading");
-                //Disable form && enable loading
                 contenedor.classList.add("disable");
                 loading.classList.add("show");
-
-                //Disable button 
                 activeButton = false;
-                //Save answers
                 const data = {
                     answers: [],
                     diseases: []
                 };
-
-                //Get answers
                 const sintomas = contenedor.querySelectorAll(".sintoma");
                 sintomas.forEach(sintoma => {
                     data.answers.push({
@@ -38,8 +29,6 @@ const code = {
                         answer: sintoma.querySelector('input[type="range"]').value
                     });
                 });
-
-                //Get diseases
                 const switchBtn = contenedor.querySelector('.enfermedades-container .switchBtn input[type="checkbox"]:checked');
                 if (switchBtn) {
                     const diseases = contenedor.querySelectorAll('.enfermedades-container .enfermedades input[type="checkbox"]:checked');
@@ -50,14 +39,10 @@ const code = {
                         });
                     });
                 }
-
-                //Load diseases
                 const results = await axios.post('./genresults', { data: data });
                 const diseases = await axios.get('./enfermedades');
                 setTimeout(() => {
-                    //Show diseases
                     code.loadDiseases(results.data.results, diseases.data);
-                    //Hide loader
                     loading.classList.remove("show");
                 }, 3000);
             }
@@ -69,31 +54,26 @@ const code = {
             data
         } = await axios.get('./sintomas');
         const enfermedades = (await axios.get('./enfermedades')).data.map(disease => disease.name);
-        //Process symptoms
         data.forEach(symptom => {
             form.append(code.genSlider(symptom));
         });
-        //Generate diseases
         form.append(code.genEnfermedades(enfermedades));
     },
     genSlider: symptom => {
-        //Gen new slider camp
         const div = document.createElement("div");
         div.classList.add("sintoma");
         div.innerHTML = `
             <p>${symptom}</p>
             <img src="" alt="">
-            <div class="slider-container green-flag">
+            <div class="slider-container gray-flag">
                 <div class="slider-deco ">
                     <div class="container">
                         <span class="value">0</span>
-                        <div class="triangle"></div>
                     </div>
                 </div>
                 <input class="slider" type="range" min="0" max="1" step="0.1" value="0">
             </div>
         `;
-        //Load deco functionality
         const slider = div.querySelector(".slider-container");
         code.loadDeco(slider);
         return div;
@@ -116,7 +96,6 @@ const code = {
                 <label for="checkbox-${i}">${enfermedad}</label>
             `;
         });
-        //Display diseases
         const switchBtn = div.querySelector(".switchBtn input");
         switchBtn.addEventListener("change", () => {
             if (cont.classList.contains("show")) cont.classList.remove("show");
@@ -135,7 +114,7 @@ const code = {
         const { name, resumen, sintomas } = data;
         const div = document.createElement("div");
         div.innerHTML = `
-            <div class="card text-dark bg-light mb-3 mx-auto" style="max-width: 50rem;">
+            <div class="space card text-white bg-dark mb-3 border-light mx-auto" style="max-width: 50rem;">
                 <div class="card-body">
                     <h3 class="card-title">${name}</h5>
                     <h5 class="card-title">Resumen</h5>
@@ -155,51 +134,49 @@ const code = {
         range.addEventListener('input', () => {
             const newValue = Number((range.value - range.min) * 100 / (range.max - range.min));
             const newPosition = 10 - (newValue * 0.2);
-            //Get total values
-            //Show values
             switch (true) {
                 case (range.value == 0):
-                    slider.classList = "slider-container green-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "0";
                     break;
                 case (range.value == 0.1):
-                    slider.classList = "slider-container green-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "1";
                     break;
                 case (range.value == 0.2):
-                    slider.classList = "slider-container green-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "2";
                     break;
                 case (range.value == 0.3):
-                    slider.classList = "slider-container yellow-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "3";
                     break;
                 case (range.value == 0.4):
-                    slider.classList = "slider-container yellow-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "4";
                     break;
                 case (range.value == 0.5):
-                    slider.classList = "slider-container yellow-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "5";
                     break;
                 case (range.value == 0.6):
-                    slider.classList = "slider-container orange-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "6";
                     break;
                 case (range.value == 0.7):
-                    slider.classList = "slider-container orange-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "7";
                     break;
                 case (range.value == 0.8):
-                    slider.classList = "slider-container orange-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "8";
                     break;
                 case (range.value == 0.9):
-                    slider.classList = "slider-container red-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "9";
                     break;
                 case (range.value == 1):
-                    slider.classList = "slider-container red-flag";
+                    slider.classList = "slider-container gray-flag";
                     valueSpan.innerHTML = "10";
                     break;
 
@@ -221,8 +198,6 @@ const code = {
                     let tmp = inputArr[j];
                     inputArr[j] = inputArr[j + 1];
                     inputArr[j + 1] = tmp;
-
-                    //Order second array
                     let tmp2 = resultsArr[j];
                     resultsArr[j] = resultsArr[j + 1];
                     resultsArr[j + 1] = tmp2;
